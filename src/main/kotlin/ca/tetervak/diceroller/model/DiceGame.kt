@@ -13,7 +13,7 @@ class DiceGame(
 
     private val dice: List<Dice>;
 
-    init{
+    init {
         dice = List(numberOfDice) {
             Dice(Dice.DEFAULT_INIT_VALUE, random)
         }
@@ -24,14 +24,11 @@ class DiceGame(
         private set
 
     val rollData: RollData?
-    get(){
-        return if(isRolled){
-            RollData(
-                dice.map { die -> die.value },
-                total
-            )
-        }else null
-    }
+        get() {
+            return if (isRolled) {
+                RollData(dice.map { die -> die.value })
+            } else null
+        }
 
     val total: Int
         get() {
@@ -43,6 +40,13 @@ class DiceGame(
                 sum
             } else 0
         }
+
+    constructor(rollData: RollData) : this(numberOfDice = rollData.values.size) {
+        for ((index, value) in rollData.values.withIndex()) {
+            dice[index].value = value
+        }
+        isRolled = true
+    }
 
     fun roll() {
         for (die in dice) {
@@ -58,5 +62,6 @@ class DiceGame(
         isRolled = false
     }
 
-    override fun toString() = "DiceGame(isRolled = $isRolled, numberOfDice = $numberOfDice, rollData = ${rollData ?: "empty"})"
+    override fun toString() =
+        "DiceGame(isRolled = $isRolled, numberOfDice = $numberOfDice, rollData = ${rollData ?: "empty"})"
 }

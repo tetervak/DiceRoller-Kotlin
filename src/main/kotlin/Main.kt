@@ -1,4 +1,5 @@
 import ca.tetervak.diceroller.model.DiceGame
+import ca.tetervak.diceroller.model.RollData
 import kotlin.random.Random
 
 fun main() {
@@ -27,4 +28,7 @@ fun main() {
         fancyGame2.roll()
         println(fancyGame2)
     }
+
+    val fancyGame3 = DiceGame(RollData(listOf(3,4,1,2,6)))
+    println(fancyGame3)
 }
