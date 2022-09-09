@@ -13,7 +13,7 @@ class Dice(
         const val DEFAULT_INIT_VALUE: Int = 1
     }
 
-    var value: Int = initValue
+    var value: Int = DEFAULT_INIT_VALUE
         set(n) {
             if (n in 1..6) {
                 field = n
@@ -21,6 +21,10 @@ class Dice(
                 throw IllegalArgumentException("Illegal die value $n")
             }
         }
+
+    init {
+        value = initValue
+    }
 
     fun roll() {
         value = 1 + random.nextInt(6)
