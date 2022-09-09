@@ -3,7 +3,7 @@ package ca.tetervak.diceroller.model
 import java.util.*
 import kotlin.random.Random
 
-// Rolls 3 dice objects and calculates the total of the roll
+// Rolls dice objects and calculates the total of the roll
 class DiceGame(
     val numberOfDice: Int = DEFAULT_NUMBER_OF_DICE,
     private val random: Random = Random.Default
