@@ -29,8 +29,7 @@ class DiceGame(
         return if(isRolled){
             RollData(
                 dice.map { die -> die.value },
-                total,
-                Date()
+                total
             )
         }else null
     }
