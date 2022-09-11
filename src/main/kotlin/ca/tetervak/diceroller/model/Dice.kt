@@ -5,7 +5,7 @@ import kotlin.random.Random
 
 // One die object, for values 1 .. 6
 class Dice(
-    private val initValue: Int = DEFAULT_INIT_VALUE,
+    val initValue: Int = DEFAULT_INIT_VALUE,
     private val random: Random = Random.Default
 ) {
 
@@ -34,5 +34,5 @@ class Dice(
         value = initValue
     }
 
-    override fun toString() = "Die(value = $value)"
+    override fun toString() = "Dice(value = $value)"
 }

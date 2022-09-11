@@ -10,10 +10,12 @@ internal class RollDataTest {
 
     @BeforeEach
     fun setUp() {
+        println("--- Test Starts ---")
     }
 
     @AfterEach
     fun tearDown() {
+        println("--- Test Ends ---")
     }
 
     @Test
