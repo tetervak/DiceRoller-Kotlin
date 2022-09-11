@@ -106,7 +106,6 @@ internal class DiceTest {
         }
     }
 
-
     @RepeatedTest(5)
     fun roll(repetitionInfo: RepetitionInfo) {
         val random = Random(seed = repetitionInfo.currentRepetition)
