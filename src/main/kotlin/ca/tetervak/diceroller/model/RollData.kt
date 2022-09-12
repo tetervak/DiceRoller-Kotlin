@@ -5,7 +5,7 @@ data class RollData(val values: List<Int>){
 
     val total: Int
     init{
-        var sum = 0;
+        var sum = 0
         for(value in values){
             sum += value
         }

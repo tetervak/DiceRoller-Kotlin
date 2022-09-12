@@ -13,7 +13,7 @@ class DiceGame(
 
     private val dice: List<Dice> = List(numberOfDice) {
         Dice(Dice.DEFAULT_INIT_VALUE, random)
-    };
+    }
 
     var isRolled: Boolean = false
         private set
