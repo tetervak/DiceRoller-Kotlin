@@ -7,6 +7,7 @@ import org.junit.jupiter.api.Test
 import org.junit.jupiter.api.assertThrows
 
 import org.junit.jupiter.api.Assertions.assertEquals
+import org.junit.jupiter.api.Assertions.assertTrue
 import org.junit.jupiter.api.BeforeAll
 import org.junit.jupiter.api.RepeatedTest
 import org.junit.jupiter.api.RepetitionInfo
@@ -14,7 +15,6 @@ import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
 import java.lang.IllegalArgumentException
 import kotlin.random.Random
-import kotlin.test.assertTrue
 
 internal class DiceTest {
 
